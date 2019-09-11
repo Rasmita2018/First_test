@@ -1,14 +1,17 @@
 node{
-        stage ("Checkout")
+        stage ("Build")
         {
-            checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/Rasmita2018/First_test.git']]])
+            echo 'Hi Rasmita !!! How are you'
         }
     
-        stage ( "Build")
+        stage ( "Test")
         {
-            echo "demo Build"
+            echo "dummy  Test"
         }
-         
+        stage ( "Deploy")
+        {
+            echo "dummy  Deploy"
+        }      
 }
         
     
